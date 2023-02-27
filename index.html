@@ -74,7 +74,7 @@
               <p class="content">
               <ul>
                 <li><b><i>Efficient inference of large language models (LLMs) :</i></b> How do we deploy LLMs in a cost-effective manner </li> 
-                <li><b><i>Language Pretraining/ RL pretraining :</i></b> Teaching models to learn good representations from unsupervised data. </li> 
+                <li><b><i>Language Pretraining :</i></b> Teaching models to learn good representations from unsupervised data. </li> 
                 <li><b><i>Grounded Language Learning:</i></b> Teaching agents to talk about environment specific concepts and entities. </li> 
               </ul>
               </p>
@@ -115,6 +115,29 @@
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <!-- <heading>Publications</heading> -->
+          <tr>
+            <td width="30%"><img src="images/mux_plm.gif" alt="3DSP" width="220" height="150" style="border-style: none">
+            <td valign="top" width="70%">
+              <a href="https://arxiv.org/pdf/2302.12441.pdf">MUX-PLMs: Pre-training Language Models with Data Multiplexing <papertitle></papertitle>
+              </a>
+            <br>
+            <strong><u> Vishvak Murahari </u></strong>,
+            Ameet Deshpande,
+            Carlos E. Jimenez,
+            Izhak Shafran,
+            Mingqiu Wang,
+            Yuan Cao,
+            Karthik Narasimhan
+            <br>
+              <em>arxiv preprint</em> 
+              <!-- <font color="red">(Poster)</font> -->
+              <br>
+              <a href="https://github.com/princeton-nlp/datamux-pretraining"> [Code]</a>
+              <p align="justify"> Data multiplexing is a recently proposed method for improving a model's inference efficiency by processing multiple instances simultaneously using an ordered representation mixture. Prior work on data multiplexing only used task-specific Transformers without any pre-training, which limited their accuracy and generality. In this paper, we develop pre-trained multiplexed language models (MUX-PLMs) that can be widely finetuned on any downstream task. Our approach includes a three-stage training procedure and novel multiplexing and demultiplexing modules for improving throughput and downstream task accuracy. We demonstrate our method on BERT and ELECTRA pre-training objectives, with our MUX-BERT and MUX-ELECTRA models achieving 2x/5x inference speedup with a 2-4 \% drop in absolute performance on GLUE and 1-2 \% drop on token-level tasks.
+              </p> 
+            </td>
+          </tr>
+
           <tr>
           <td width="30%"><img src="images/asap.gif" alt="3DSP" width="220" height="150" style="border-style: none">
           <td valign="top" width="70%">
