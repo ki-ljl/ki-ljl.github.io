@@ -43,8 +43,8 @@
                 <name>Vishvak Murahari</name>
               </p>
               <p>
-              I am a 3<sup>rd</sup> year CS PhD 
-              student at Princeton University, advised by <a href="https://www.cs.princeton.edu/~karthikn/">Prof. Karthik Narasimhan</a>. I am interested in Natural Language Processing and Machine Learning.
+              I am a computer scientist at 
+              at Princeton University, pursuing my Ph.D. advised by <a href="https://www.cs.princeton.edu/~karthikn/">Prof. Karthik Narasimhan</a>. I am interested in Natural Language Processing and Machine Learning.
               </p>
               <p class="content">
               I earned my Bachelors and Masters in Computer Science from Georgia Tech and I was fortunate to be advised by <a href="https://www.cc.gatech.edu/~parikh/vil.html">Prof. Devi Parikh</a> , <a href="https://abhishekdas.com/">Abhishek Das</a> and  <a href="https://www.cc.gatech.edu/people/thomas-ploetz"> Prof. Thomas Ploetz</a>.
@@ -126,12 +126,62 @@
           </tr>
         </tbody></table>
 
+
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
           <!-- <heading>Publications</heading> -->
+          <tr>
+            <td width="30%"><img src="images/csts_teaser.png" alt="3DSP" width="220" height="180" style="border-style: none">
+            <td valign="top" width="70%">
+              <a href="https://arxiv.org/abs/2305.15093">C-STS: Conditional Semantic Textual Similarity<papertitle></papertitle>
+              </a>
+            <br>
+            Ameet Deshpande,
+            Carlos E. Jimenez,
+            Howard Chen,
+            <strong><u>Vishvak Murahari</u></strong>,
+            Victoria Graf,
+            Tanmay Rajpurohit,
+            Ashwin Kalyan,
+            Danqi Chen,
+            Karthik Narasimhan
+            <br>
+              <em>Arxiv preprint</em> 
+              <!-- <font color="red">(Poster)</font> -->
+              <br>
+              <p align="justify">
+                Semantic textual similarity (STS) has been a cornerstone task in NLP that measures the degree of similarity between a pair of sentences, with applications in information retrieval, question answering, and embedding methods. However, it is an inherently ambiguous task, with the sentence similarity depending on the specific aspect of interest. We resolve this ambiguity by proposing a novel task called conditional STS (C-STS) which measures similarity conditioned on an aspect elucidated in natural language (hereon, condition). 
+                C-STS's advantages are two-fold: (1) it reduces the subjectivity and ambiguity of STS, and (2) enables fine-grained similarity evaluation using diverse conditions. C-STS contains almost 20,000 instances from diverse domains and we demonstrate that even the most performant fine-tuning and in-context learning models (GPT-4, Flan, SimCSE) find it challenging. We encourage the community to evaluate their models on C-STS to provide a more holistic view of semantic similarity and natural language understanding.
+              </p> 
+            </td>
+          </tr>
+
+          <!-- <heading>Publications</heading> -->
+          <tr>
+            <td width="30%"><img src="images/prumux_teaser.png" alt="3DSP" width="220" height="180" style="border-style: none">
+            <td valign="top" width="70%">
+              <a href="https://arxiv.org/abs/2305.14706">PruMUX: Augmenting Data Multiplexing with Model Compression<papertitle></papertitle>
+              </a>
+            <br>
+            Yushan Su,
+            <strong><u>Vishvak Murahari</u></strong>,
+            Kai Li,
+            Karthik Narasimhan
+            <br>
+              <em>ACL Findings 2023</em> 
+              <!-- <font color="red">(Poster)</font> -->
+              <br>
+              <p align="justify"> 
+                As language models increase in size by the day, methods for efficient inference are critical to leveraging their capabilities for various applications. Prior work has investigated techniques like model pruning, knowledge distillation, and data multiplexing to increase model throughput without sacrificing accuracy. In this paper, we combine two such methods -- structured pruning and data multiplexing -- to compound the speedup gains obtained by either method. Our approach, PruMUX, obtains up to 7.5-29.5X throughput improvement over BERT-base model with accuracy threshold from 80% to 74%. We further study various combinations of parameters (such as sparsity and multiplexing factor) in the two techniques to provide a comprehensive analysis of the tradeoff between accuracy and throughput in the resulting models. We then propose Auto-PruMUX, a meta-level model that can predict the high-performance parameters for pruning and multiplexing given a desired accuracy loss budget, providing a practical method to leverage the combination effectively.
+
+              </p> 
+            </td>
+          </tr>
+
           <tr>
             <td width="30%"><img src="images/toxicity_teaser.jpg" alt="3DSP" width="220" height="150" style="border-style: none">
             <td valign="top" width="70%">
-              <a href="https://arxiv.org/abs/2304.05335">Toxicity in ChatGPT: Analyzing Persona-assigned Language Models <papertitle></papertitle>
+              <a href="https://sites.google.com/princeton.edu/toxicity-in-llms">Toxicity in ChatGPT: Analyzing Persona-assigned Language Models <papertitle></papertitle>
               </a>
             <br>
             Ameet Deshpande^,
@@ -167,11 +217,13 @@
             Yuan Cao,
             Karthik Narasimhan
             <br>
-              <em>arxiv preprint</em> 
+              <em>Arxiv preprint</em> 
               <!-- <font color="red">(Poster)</font> -->
               <br>
               <a href="https://github.com/princeton-nlp/datamux-pretraining"> [Code]</a>
-              <p align="justify"> Data multiplexing is a recently proposed method for improving a model's inference efficiency by processing multiple instances simultaneously using an ordered representation mixture. Prior work on data multiplexing only used task-specific Transformers without any pre-training, which limited their accuracy and generality. In this paper, we develop pre-trained multiplexed language models (MUX-PLMs) that can be widely finetuned on any downstream task. Our approach includes a three-stage training procedure and novel multiplexing and demultiplexing modules for improving throughput and downstream task accuracy. We demonstrate our method on BERT and ELECTRA pre-training objectives, with our MUX-BERT and MUX-ELECTRA models achieving 2x/5x inference speedup with a 2-4 \% drop in absolute performance on GLUE and 1-2 \% drop on token-level tasks.
+              <p align="justify"> 
+                The widespread adoption of large language models such as ChatGPT and Bard has led to unprecedented demand for these technologies. The burgeoning cost of inference for ever-increasing model sizes coupled with hardware shortages has limited affordable access and poses a pressing need for efficiency approaches geared towards high throughput and performance. Multi-input multi-output (MIMO) algorithms such as data multiplexing, offer a promising solution with a many-fold increase in throughput by performing inference for multiple inputs at the cost of a single input. Yet these approaches are not currently performant enough to be deployed in modern systems. We change that by developing MUX-PLMs, a class of high throughput pre-trained language models (PLMs) trained with data multiplexing, that can be fine-tuned for any downstream task to yield high-throughput high-performance. Our novel multiplexing and demultiplexing modules proficiently entangle and disentangle inputs, and enable high-performance high throughput MUX-PLMs that are competitive with vanilla PLMs while achieving 2x/5x inference speedup with only a 1-4 % drop on a broad suite of tasks.
+
               </p> 
             </td>
           </tr>
